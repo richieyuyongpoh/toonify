@@ -20,8 +20,8 @@ key = st.sidebar.radio(
     
 )
 
-st.sidebar.write("<font color='blue'>Note: It is subject to the availability of license usage.</font>", unsafe_allow_html=True)
-st.sidebar.write("<font color='blue'>      Once the license usage has been exceeded, the program will stop executing automatically.</font>", unsafe_allow_html=True)
+st.sidebar.write("<font color='Aquamarine'>Note: It is subject to the availability of license usage.</font>", unsafe_allow_html=True)
+st.sidebar.write("<font color='Aquamarine'>      Once the license usage has been exceeded, the program will stop executing automatically.</font>", unsafe_allow_html=True)
 
 if key=="Public":
    chosen_key = st.secrets["public_key"]
