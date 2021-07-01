@@ -24,10 +24,10 @@ st.sidebar.write("<font color='blue'>Note: It is subject to the availability of 
 st.sidebar.write("<font color='blue'>      Once the license usage has been exceeded, the program will stop executing automatically.</font>", unsafe_allow_html=True)
 
 if key=="Public":
-   chosen_key = public_key
+   chosen_key = st.secrets["public_key"]
 
 elif key=="Default":
-   chosen_key = default_key
+   chosen_key = st.secrets["default_key"]
 
 else:
      user_key = st.sidebar.text_input('Insert Key', 'the-key-is-key')
@@ -47,7 +47,7 @@ if st.sidebar.button('RUN'):
         temp_file.write(uploaded_file.getvalue())
 
         r = requests.post(
-            API_init,
+            st.secrets["API_init"],
             files={
                 'image': open(temp_file.name, 'rb'),
             },
